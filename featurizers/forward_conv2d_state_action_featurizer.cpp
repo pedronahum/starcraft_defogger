@@ -6,6 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  **/
 
+#include <cmath>
 #include "forward_conv2d_state_action_featurizer.h"
 
 template<typename T> using Vector = std::vector<T>;
