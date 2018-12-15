@@ -8,7 +8,7 @@ This repository is a code dump of the experiments in
 - PyTorch 0.3.1
 - ZSTD 1.3+
 - [optional] Visdom
-- [Download the dataset](https://s3-us-west-2.amazonaws.com/stardata/original_replays.tar.gz).
+- [Download the dataset](https://s3-us-west-2.amazonaws.com/stardata/defogger_reduced.tar.gz).
   This dataset is built by running `python reduce_data.py --list /path/to/stardata/all.list --save /output/path` on [StarData](https://github.com/TorchCraft/StarData).
   We provide it here since the data is much smaller than StarData after preprocessing.
 
@@ -19,6 +19,18 @@ This repository is a code dump of the experiments in
     pip install .
     cd ..
     make
+
+## Download lists
+
+    cd ..
+    wget "https://s3-us-west-2.amazonaws.com/stardata/dumped_replays/train.list"
+    wget "https://s3-us-west-2.amazonaws.com/stardata/dumped_replays/valid.list"
+    wget "https://s3-us-west-2.amazonaws.com/stardata/dumped_replays/test.list"
+
+    head -n100 train.list > smalltrain.list
+    head -n100 valid.list > smallvalid.list
+    head -n100 test.list > smalltest.list
+    
 
 ## Training
 
